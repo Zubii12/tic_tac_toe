@@ -114,13 +114,9 @@ class _MyHomePageState extends State<MyHomePage> {
     const Color yellow = Colors.yellow;
     for (int i = 0; i < winningCombinations.length; i++) {
       final List<int> list = winningCombinations[i];
-      if (gameState[list[0]] == green &&
-          gameState[list[1]] == green &&
-          gameState[list[2]] == green) {
+      if (gameState[list[0]] == green && gameState[list[1]] == green && gameState[list[2]] == green) {
         setWinningState(green, list);
-      } else if (gameState[list[0]] == yellow &&
-          gameState[list[1]] == yellow &&
-          gameState[list[2]] == yellow) {
+      } else if (gameState[list[0]] == yellow && gameState[list[1]] == yellow && gameState[list[2]] == yellow) {
         setWinningState(yellow, list);
       }
     }
@@ -157,11 +153,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         color: gameState[index],
                         border: const Border.symmetric(
                           vertical: BorderSide(color: Colors.grey, width: 4.0),
-                          horizontal:
-                              BorderSide(color: Colors.grey, width: 4.0),
+                          horizontal: BorderSide(color: Colors.grey, width: 4.0),
                         ),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(8.0))),
+                        borderRadius: const BorderRadius.all(Radius.circular(8.0))),
                     child: InkWell(
                       splashColor: Colors.white,
                       onTap: () {
